@@ -1,12 +1,16 @@
 
 :root{
-    --bodycolor:#DDD;
+    --bodycolor:rgba(114, 198, 247, 0.246);
     --linkcolor:rgb(5, 21, 75);
     --linkhovercolor: rgb(255, 196, 0);
 }
 
 body{
-    background-color: var(--bodycolor);
+    background-image: linear-gradient(to bottom, rgba(247, 216, 81, 0.8), rgba(19, 94, 117, 0.85)),
+    url("./Ag\ NC\ -1.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 450px 1fr;
     grid-template-rows: 30vh 200px 30vh;
@@ -70,7 +74,7 @@ a:hover{
 
   .flip-card-front img{
       height: 90%;
-      margin:2.5%;
+      margin:2.2%;
       float: left;
   }
 
@@ -120,4 +124,10 @@ a:hover{
 .fa-github{
     background:black;
     color: white;
+}
+
+.simple{
+   margin:0px;
+  padding:0px;
+  color:var(--linkcolor);
 }
