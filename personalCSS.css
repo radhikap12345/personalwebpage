@@ -76,18 +76,22 @@ a:hover{
 
   .cardInformation{
       text-align: center;
+      height: 100%;
+      
   }
 
   .designation{
-      font-size: small;
+      font-size:14px;
   }
 
   h1{
       margin: 10px;
+      font-size: 18px;
   }
 
   h2{
       margin: 60px 0px 20px 0px;
+      font-size: 16px;
   }
 
   .fa {
