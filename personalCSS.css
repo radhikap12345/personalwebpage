@@ -39,6 +39,7 @@ a:hover{
   padding: 20px;
 }
 #fliplink:active + .flip-card-inner{
+  -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
 
@@ -58,13 +59,17 @@ a:hover{
   
     width: 100%;
     height: 100%;
-    transition: all 3s ease;
+    -webkit-transition: 2s;
+    transition: all 2s ease;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    box-shadow: 10px 20px 15px 0 rgba(0,0,0,0.2);
+    box-shadow: 10px 20px 15px 0 rgba(0,0,0,0.5);
   }
   
   .flip-card:hover .flip-card-inner{
+    -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
+    box-shadow: 10px -20px 15px 0 rgba(0,0,0,0.5);
   }
   
   .flip-card-front, .flip-card-back {
@@ -83,6 +88,7 @@ a:hover{
   .flip-card-back {
     background-color:white;
     color:black;
+    -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
   }
 
