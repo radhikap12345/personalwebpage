@@ -7,7 +7,7 @@
 
 body{
     background-image: linear-gradient(to bottom, rgba(255, 196, 0, 0.451), rgba(145, 14, 94, 0.45),rgba(5, 21, 75, 0.62)),
-    linear-gradient(to right, rgba(243, 159, 2, 0.571),rgba(0, 189, 132, 0.555)), url("./Ag\ NC\ -1.png");
+    linear-gradient(to right, rgba(243, 159, 2, 0.571),rgba(189, 0, 0, 0.255),rgba(22, 22, 116, 0.6)), url("./Ag\ NC\ -1.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -231,6 +231,6 @@ a:hover{
   }
 
   #bottom-hologram-logo img{
-    width: 70px;
+    display: none;
   }
 }
