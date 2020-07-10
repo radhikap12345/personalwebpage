@@ -106,7 +106,7 @@ body{
 
 @keyframes nanocube2-small {
     0%   {transform:translate(70vw,3px) rotate(-30deg);}
-    30%  {transform: translate(70vw,200px) rotate(250deg);}
+    30%  {transform: translate(70vw,190px) rotate(250deg);}
     60%  {transform:translate(75vw,100px) rotate(300deg);}
     100% {transform:translate(70vw,3px) rotate(330deg);}
 }
