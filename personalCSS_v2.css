@@ -129,8 +129,8 @@ body, html{
     -webkit-animation-name: nanocube1;
     width: 80px;
     height: 80px;
-    animation-duration: 19s;
-    -webkit-animation-duration: 19s;
+    animation-duration: 33s;
+    -webkit-animation-duration: 33s;
 }
 #cubeNo2{
     animation-name: nanocube2;
