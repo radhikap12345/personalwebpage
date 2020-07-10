@@ -385,7 +385,7 @@ a:hover{
 
 @media (max-width:500px){
   .mainGrid{
-    grid-template-columns: 1fr 260px 1fr;
+    grid-template-columns: 1fr 270px 1fr;
     grid-template-rows: 3fr 120px 8fr;
   }
 
