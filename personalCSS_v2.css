@@ -52,12 +52,17 @@ body{
   background-color:white;
   position: relative;
   animation-duration: 10s;
-  transition: 2s;
+  -webkit-animation-duration: 10s;
   transition-timing-function: ease-in-out;
   opacity: 0.2;
+  -webkit-opacity:0.2;
   border-radius: 8px;
   animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
   filter: blur(6px);
+  -webkit-filter: blur(6px);
 }
 
 @keyframes nanocube1 {
@@ -105,17 +110,67 @@ body{
     60%  {left:75vw; top:100px;rotate: 300deg;}
     100% {left:70vw; top:3px;rotate: 330deg;}
 }
+
+@keyframes nanocube1 {
+  0%   {left:100px; top:60px;rotate: 10deg;}
+  20%  {left:100px; top:150px;rotate:100deg;}
+  40%  {left:30px; top:200px;rotate:190deg;}
+  60%  {left:200px; top: 100px; rotate:280deg;}
+  80%  {left:10px; top: 100px; rotate:350deg;}
+  100% {left:100px; top:60px;rotate: 370deg;}
+}
+
+@keyframes nanocube2 {
+  0%   {left:400px; top:300px;rotate: -30deg;}
+  30%  {left:330px; top:350px;rotate: 45deg;background-color: rgba(216, 173, 180, 0.616);}
+  50% {left:500px; top:300px;rotate: 150deg;}
+  70%  {left:530px; top:350px;rotate: 200deg;background-color: rgba(216, 173, 180, 0.616);}
+  80%  {left:600px; top:330px;rotate: 250deg;background-color: rgba(216, 173, 180, 0.616);}
+  100% {left:400px; top:300px;rotate: 330deg;}
+}
+
+@-webkit-keyframes nanocube1-mid {
+  0%   {left:100px; top:60px;rotate: 10deg;}
+  50%  {left:10px; top: 100px; rotate:350deg;}
+  100% {left:100px; top:60px;rotate: 370deg;}
+}
+
+@-webkit-keyframes nanocube2-mid {
+  0%   {left:80vw; top:10px;rotate: -30deg;}
+  30%  {left:80vw; top:150px;rotate: 250deg;}
+  60%  {left:85vw; top:100px;rotate: 300deg;}
+  100% {left:80vw; top:10px;rotate: 330deg;}
+}
+
+@-webkit-keyframes nanocube1-small {
+  0%   {left:100px; top:5px;rotate: 30deg;}
+  20%  {left:10px; top: 100px; rotate:180deg;}
+  40%  {left:100px; top:160px;rotate: 300deg;}
+  60%  {left:200px; top:60px;rotate: 370deg;}
+  100% {left:100px; top:5px;rotate: 300deg;}
+}
+
+@-webkit-keyframes nanocube2-small {
+  0%   {left:70vw; top:3px;rotate: -30deg;}
+  30%  {left:70vw; top:200px;rotate: 250deg;}
+  60%  {left:75vw; top:100px;rotate: 300deg;}
+  100% {left:70vw; top:3px;rotate: 330deg;}
+}
 #cubeNo1{
     animation-name: nanocube1;
+    -webkit-animation-name: nanocube1;
     width: 80px;
     height: 80px;
     animation-duration: 20s;
+    -webkit-animation-duration: 20s;
 }
 #cubeNo2{
     animation-name: nanocube2;
+    -webkit-animation-name: nanocube2;
     width: 90px;
     height: 90px;
     animation-duration: 30s;
+    -webkit-animation-duration: 30s;
 }
 
 a{
@@ -290,12 +345,14 @@ a:hover{
   }
   #cubeNo1{
       animation-name: nanocube1-mid;
+      -webkit-animation-name: nanocube1-mid;
       width: 100px;
       height: 100px;
   }
 
   #cubeNo2{
     animation-name: nanocube2-mid;
+    -webkit-animation-name: nanocube2-mid;
     width: 120px;
     height: 120px;
   }
@@ -355,6 +412,7 @@ a:hover{
 
   #cubeNo1{
     animation-name: nanocube1-small;
+    -webkit-animation-name: nanocube1-small;
     width: 60px;
     height: 60px;
     border-radius: 4px;
@@ -362,6 +420,7 @@ a:hover{
 
   #cubeNo2{
     animation-name: nanocube2-small;
+    -webkit-animation-name: nanocube1-small;
     width: 80px;
     height: 80px;
   } 
