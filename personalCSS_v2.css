@@ -13,6 +13,7 @@ body, html{
   background-color: rgb(36, 36, 36);
   height: 100vh;
   width: 100vw;
+  
 }
 .mainGrid{
     
@@ -23,7 +24,7 @@ body, html{
     overflow-x: hidden;
     margin:0px;
     padding:0px;
-
+    font-variant: small-caps;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -115,23 +116,39 @@ body, html{
     60%  {transform:translate(75vw,100px) rotate(300deg);}
     100% {transform:translate(70vw,3px) rotate(330deg);}
 }
+
+@keyframes nanocube3 {
+  0%   {transform:translate(60vw,-150px) rotate(-30deg);}
+  30%  {transform: translate(60vw,10px) rotate(250deg);}
+  60%  {transform:translate(70vw,-100px) rotate(360deg);}
+  80% {transform:translate(65vw,3px) rotate(440deg);}
+  100% {transform:translate(60vw,-150px) rotate(330deg);}
+}
 #cubeNo1{
     animation-name: nanocube1;
     -webkit-animation-name: nanocube1;
     width: 80px;
     height: 80px;
-    animation-duration: 20s;
-    -webkit-animation-duration: 20s;
+    animation-duration: 19s;
+    -webkit-animation-duration: 19s;
 }
 #cubeNo2{
     animation-name: nanocube2;
     -webkit-animation-name: nanocube2;
     width: 90px;
     height: 90px;
-    animation-duration: 30s;
-    -webkit-animation-duration: 30s;
+    animation-duration: 29s;
+    -webkit-animation-duration: 29s;
 }
 
+#cubeNo3{
+  animation-name: nanocube3;
+  -webkit-animation-name: nanocube3;
+  width: 70px;
+  height: 70px;
+  animation-duration: 37s;
+  -webkit-animation-duration: 37s;
+}
 a{
     color:var(--linkcolor);
     outline: none;
@@ -320,6 +337,9 @@ a:hover{
     width: 120px;
     height: 120px;
   }
+  #cubeNo3{
+    display: none;
+  }
   .backgroundImage{
     background-image: linear-gradient(to bottom, rgba(255, 196, 0, 0.451), rgba(145, 14, 94, 0.45),rgba(5, 21, 75, 0.62)),
     linear-gradient(to right, rgba(243, 159, 2, 0.571),rgba(189, 0, 0, 0.255),rgba(22, 22, 116, 0.6)),url("./editedAgNCmid.png");
@@ -393,6 +413,11 @@ a:hover{
     height: 80px;
     opacity: 0.3;
   } 
+
+  #cubeNo3{
+    display: none;
+  }
+
   .designation{
     font: size 10px;
   }
