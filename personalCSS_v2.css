@@ -43,8 +43,7 @@ body{
   position:absolute;
   top:0px;
   left:0px;
-  
-}
+  }
 
 .cube{
   width: 10vw;
@@ -59,102 +58,57 @@ body{
   border-radius: 8px;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
   filter: blur(6px);
   -webkit-filter: blur(6px);
+  left:0px;
+  top:0px;
 }
 
 @keyframes nanocube1 {
-    0%   {left:100px; top:60px;rotate: 10deg;}
-    20%  {left:100px; top:150px;rotate:100deg;}
-    40%  {left:30px; top:200px;rotate:190deg;}
-    60%  {left:200px; top: 100px; rotate:280deg;}
-    80%  {left:10px; top: 100px; rotate:350deg;}
-    100% {left:100px; top:60px;rotate: 370deg;}
-  }
+    0%   {transform:translate(100px,60px) rotate(10deg) ;}
+    20%  {transform:translate(100px,150px) rotate(100deg) ;}
+    40%  {transform:translate(30px,200px) rotate(190deg) ;}
+    60%  {transform:translate(200px,100px) rotate(280deg) ;}
+    80%  {transform:translate(10px,100px) rotate(350deg);}
+    100% {transform:translate(100px,60px) rotate(370deg) ;}
+}
 
 @keyframes nanocube2 {
-    0%   {left:400px; top:300px;rotate: -30deg;}
-    30%  {left:330px; top:350px;rotate: 45deg;background-color: rgba(216, 173, 180, 0.616);}
-    50% {left:500px; top:300px;rotate: 150deg;}
-    70%  {left:530px; top:350px;rotate: 200deg;background-color: rgba(216, 173, 180, 0.616);}
-    80%  {left:600px; top:330px;rotate: 250deg;background-color: rgba(216, 173, 180, 0.616);}
-    100% {left:400px; top:300px;rotate: 330deg;}
+    0%   {transform: translate(400px,300px) rotate(-30deg);}
+    30%  {transform:translate(330px,350px) rotate(45deg);}
+    50% {transform:translate(500px,300px) rotate(150deg);}
+    70%  {transform: translate(530px,350px) rotate(200deg);}
+    80%  {transform: translate(600px,330px) rotate(250deg);}
+    100% {transform: translate(400px,300px) rotate(330deg);}
 }
 
 @keyframes nanocube1-mid {
-    0%   {left:100px; top:60px;rotate: 10deg;}
-    50%  {left:10px; top: 100px; rotate:350deg;}
-    100% {left:100px; top:60px;rotate: 370deg;}
+    0%   {transform: translate(100px,60px) rotate(10deg);}
+    50%  {transform: translate(10px,100px) rotate(350deg);}
+    100% {transform: translate(100px,60px) rotate(370deg);}
   }
 
 @keyframes nanocube2-mid {
-    0%   {left:80vw; top:10px;rotate: -30deg;}
-    30%  {left:80vw; top:150px;rotate: 250deg;}
-    60%  {left:85vw; top:100px;rotate: 300deg;}
-    100% {left:80vw; top:10px;rotate: 330deg;}
+    0%   {transform: translate(80vw, 10px) rotate(-30deg);}
+    30%  {transform:translate(80vw,150px) rotate(250deg);}
+    60%  {transform:translate(85vw,100px) rotate(300deg);}
+    100% {transform:translate(80vw,10px) rotate(330deg);}
 }
 
 @keyframes nanocube1-small {
-    0%   {left:100px; top:5px;rotate: 30deg;}
-    20%  {left:10px; top: 100px; rotate:180deg;}
-    40%  {left:100px; top:160px;rotate: 300deg;}
-    60%  {left:200px; top:60px;rotate: 370deg;}
-    100% {left:100px; top:5px;rotate: 300deg;}
+    0%   {transform:translate(100px,5px) rotate(30deg);}
+    20%  {transform: translate(10px,100px) rotate(180deg);}
+    40%  {transform:translate(100px,160px) rotate(300deg);}
+    60%  {transform:translate(200px,60px) rotate(370deg);}
+    100% {transform:translate(100px,5px) rotate(300deg);}
   }
 
 @keyframes nanocube2-small {
-    0%   {left:70vw; top:3px;rotate: -30deg;}
-    30%  {left:70vw; top:200px;rotate: 250deg;}
-    60%  {left:75vw; top:100px;rotate: 300deg;}
-    100% {left:70vw; top:3px;rotate: 330deg;}
-}
-
-@keyframes nanocube1 {
-  0%   {left:100px; top:60px;rotate: 10deg;}
-  20%  {left:100px; top:150px;rotate:100deg;}
-  40%  {left:30px; top:200px;rotate:190deg;}
-  60%  {left:200px; top: 100px; rotate:280deg;}
-  80%  {left:10px; top: 100px; rotate:350deg;}
-  100% {left:100px; top:60px;rotate: 370deg;}
-}
-
-@keyframes nanocube2 {
-  0%   {left:400px; top:300px;rotate: -30deg;}
-  30%  {left:330px; top:350px;rotate: 45deg;background-color: rgba(216, 173, 180, 0.616);}
-  50% {left:500px; top:300px;rotate: 150deg;}
-  70%  {left:530px; top:350px;rotate: 200deg;background-color: rgba(216, 173, 180, 0.616);}
-  80%  {left:600px; top:330px;rotate: 250deg;background-color: rgba(216, 173, 180, 0.616);}
-  100% {left:400px; top:300px;rotate: 330deg;}
-}
-
-@-webkit-keyframes nanocube1-mid {
-  0%   {left:100px; top:60px;rotate: 10deg;}
-  50%  {left:10px; top: 100px; rotate:350deg;}
-  100% {left:100px; top:60px;rotate: 370deg;}
-}
-
-@-webkit-keyframes nanocube2-mid {
-  0%   {left:80vw; top:10px;rotate: -30deg;}
-  30%  {left:80vw; top:150px;rotate: 250deg;}
-  60%  {left:85vw; top:100px;rotate: 300deg;}
-  100% {left:80vw; top:10px;rotate: 330deg;}
-}
-
-@-webkit-keyframes nanocube1-small {
-  0%   {left:100px; top:5px;rotate: 30deg;}
-  20%  {left:10px; top: 100px; rotate:180deg;}
-  40%  {left:100px; top:160px;rotate: 300deg;}
-  60%  {left:200px; top:60px;rotate: 370deg;}
-  100% {left:100px; top:5px;rotate: 300deg;}
-}
-
-@-webkit-keyframes nanocube2-small {
-  0%   {left:70vw; top:3px;rotate: -30deg;}
-  30%  {left:70vw; top:200px;rotate: 250deg;}
-  60%  {left:75vw; top:100px;rotate: 300deg;}
-  100% {left:70vw; top:3px;rotate: 330deg;}
+    0%   {transform:translate(70vw,3px) rotate(-30deg);}
+    30%  {transform: translate(70vw,200px) rotate(250deg);}
+    60%  {transform:translate(75vw,100px) rotate(300deg);}
+    100% {transform:translate(70vw,3px) rotate(330deg);}
 }
 #cubeNo1{
     animation-name: nanocube1;
@@ -420,7 +374,7 @@ a:hover{
 
   #cubeNo2{
     animation-name: nanocube2-small;
-    -webkit-animation-name: nanocube1-small;
+    -webkit-animation-name: nanocube2-small;
     width: 80px;
     height: 80px;
   } 
