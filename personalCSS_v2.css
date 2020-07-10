@@ -63,6 +63,7 @@ body{
   -webkit-filter: blur(6px);
   left:0px;
   top:0px;
+  backdrop-filter: blur(2px);
 }
 
 @keyframes nanocube1 {
@@ -106,7 +107,7 @@ body{
 
 @keyframes nanocube2-small {
     0%   {transform:translate(70vw,3px) rotate(-30deg);}
-    30%  {transform: translate(70vw,190px) rotate(250deg);}
+    30%  {transform: translate(70vw,160px) rotate(250deg);}
     60%  {transform:translate(75vw,100px) rotate(300deg);}
     100% {transform:translate(70vw,3px) rotate(330deg);}
 }
@@ -297,11 +298,16 @@ a:hover{
     grid-template-rows: 4fr 150px 8fr;
     overflow-x: hidden;
   }
+
+  .cube{
+    filter: blur(6px);
+  }
   #cubeNo1{
       animation-name: nanocube1-mid;
       -webkit-animation-name: nanocube1-mid;
       width: 100px;
       height: 100px;
+      opacity: 0.3;
   }
 
   #cubeNo2{
@@ -372,11 +378,16 @@ a:hover{
     border-radius: 4px;
   }
 
+  .cube{
+    filter: blur(4px);
+  }
+
   #cubeNo2{
     animation-name: nanocube2-small;
     -webkit-animation-name: nanocube2-small;
     width: 80px;
     height: 80px;
+    opacity: 0.3;
   } 
   .designation{
     font: size 10px;
