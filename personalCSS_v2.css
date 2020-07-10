@@ -8,6 +8,7 @@
 body{
   margin:0px;
   padding:0px;
+  overflow-x: hidden;
 }
 .mainGrid{
     
@@ -18,17 +19,20 @@ body{
     overflow-x: hidden;
     margin:0px;
     padding:0px;
-    background-color:rgb(70, 70, 70);
+
     height: 100vh;
     width: 100vw;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
 
 .backgroundImage{
   background-image: linear-gradient(to bottom, rgba(255, 196, 0, 0.451), rgba(145, 14, 94, 0.45),rgba(5, 21, 75, 0.62)),
-  linear-gradient(to right, rgba(243, 159, 2, 0.571),rgba(189, 0, 0, 0.255),rgba(22, 22, 116, 0.6)), url("./Ag\ NC\ -1.png");
+  linear-gradient(to right, rgba(243, 159, 2, 0.571),rgba(189, 0, 0, 0.255),rgba(22, 22, 116, 0.6)),url("./editedAgNClarge.jpg");
   background-color: black;
-  filter:blur(5px);
-  -webkit-filter: blur(5px);
+  filter:blur(4px);
+  -webkit-filter: blur(4px);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,7 +43,81 @@ body{
   position:absolute;
   top:0px;
   left:0px;
+  
 }
+
+.cube{
+  width: 10vw;
+  height: 10vw;
+  background-color:white;
+  position: relative;
+  animation-duration: 10s;
+  transition: 2s;
+  transition-timing-function: ease-in-out;
+  opacity: 0.2;
+  border-radius: 8px;
+  animation-iteration-count: infinite;
+  filter: blur(6px);
+}
+
+@keyframes nanocube1 {
+    0%   {left:100px; top:60px;rotate: 10deg;}
+    20%  {left:100px; top:150px;rotate:100deg;}
+    40%  {left:30px; top:200px;rotate:190deg;}
+    60%  {left:200px; top: 100px; rotate:280deg;}
+    80%  {left:10px; top: 100px; rotate:350deg;}
+    100% {left:100px; top:60px;rotate: 370deg;}
+  }
+
+@keyframes nanocube2 {
+    0%   {left:400px; top:300px;rotate: -30deg;}
+    30%  {left:330px; top:350px;rotate: 45deg;background-color: rgba(216, 173, 180, 0.616);}
+    50% {left:500px; top:300px;rotate: 150deg;}
+    70%  {left:530px; top:350px;rotate: 200deg;background-color: rgba(216, 173, 180, 0.616);}
+    80%  {left:600px; top:330px;rotate: 250deg;background-color: rgba(216, 173, 180, 0.616);}
+    100% {left:400px; top:300px;rotate: 330deg;}
+}
+
+@keyframes nanocube1-mid {
+    0%   {left:100px; top:60px;rotate: 10deg;}
+    50%  {left:10px; top: 100px; rotate:350deg;}
+    100% {left:100px; top:60px;rotate: 370deg;}
+  }
+
+@keyframes nanocube2-mid {
+    0%   {left:80vw; top:10px;rotate: -30deg;}
+    30%  {left:80vw; top:150px;rotate: 250deg;}
+    60%  {left:85vw; top:100px;rotate: 300deg;}
+    100% {left:80vw; top:10px;rotate: 330deg;}
+}
+
+@keyframes nanocube1-small {
+    0%   {left:100px; top:5px;rotate: 30deg;}
+    20%  {left:10px; top: 100px; rotate:180deg;}
+    40%  {left:100px; top:160px;rotate: 300deg;}
+    60%  {left:200px; top:60px;rotate: 370deg;}
+    100% {left:100px; top:5px;rotate: 300deg;}
+  }
+
+@keyframes nanocube2-small {
+    0%   {left:70vw; top:3px;rotate: -30deg;}
+    30%  {left:70vw; top:200px;rotate: 250deg;}
+    60%  {left:75vw; top:100px;rotate: 300deg;}
+    100% {left:70vw; top:3px;rotate: 330deg;}
+}
+#cubeNo1{
+    animation-name: nanocube1;
+    width: 80px;
+    height: 80px;
+    animation-duration: 20s;
+}
+#cubeNo2{
+    animation-name: nanocube2;
+    width: 90px;
+    height: 90px;
+    animation-duration: 30s;
+}
+
 a{
     color:var(--linkcolor);
     outline: none;
@@ -208,6 +286,23 @@ a:hover{
   .mainGrid{
     grid-template-columns: 1fr 300px 1fr;
     grid-template-rows: 4fr 150px 8fr;
+    overflow-x: hidden;
+  }
+  #cubeNo1{
+      animation-name: nanocube1-mid;
+      width: 100px;
+      height: 100px;
+  }
+
+  #cubeNo2{
+    animation-name: nanocube2-mid;
+    width: 120px;
+    height: 120px;
+  }
+  .backgroundImage{
+    background-image: linear-gradient(to bottom, rgba(255, 196, 0, 0.451), rgba(145, 14, 94, 0.45),rgba(5, 21, 75, 0.62)),
+    linear-gradient(to right, rgba(243, 159, 2, 0.571),rgba(189, 0, 0, 0.255),rgba(22, 22, 116, 0.6)),url("./editedAgNCmid.png");
+    overflow-x: hidden;
   }
 
   .designation{
@@ -244,6 +339,7 @@ a:hover{
   #bottom-hologram-logo img{
     width: 100px;
   }
+ 
 }
 
 @media (max-width:500px){
@@ -252,6 +348,23 @@ a:hover{
     grid-template-rows: 3fr 120px 8fr;
   }
 
+  .backgroundImage{
+    background-image: linear-gradient(to bottom, rgba(255, 196, 0, 0.451), rgba(145, 14, 94, 0.45),rgba(5, 21, 75, 0.62)),
+    linear-gradient(to right, rgba(243, 159, 2, 0.571),rgba(189, 0, 0, 0.255),rgba(22, 22, 116, 0.6)),url("./editedAgNCmini.png");
+  }
+
+  #cubeNo1{
+    animation-name: nanocube1-small;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+  }
+
+  #cubeNo2{
+    animation-name: nanocube2-small;
+    width: 80px;
+    height: 80px;
+  } 
   .designation{
     font: size 10px;
   }
