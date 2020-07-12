@@ -100,7 +100,8 @@ document.getElementById("cubeLinkNo1").addEventListener("click",showPanel);
 
 
 document.getElementById("closebtn").addEventListener("click",hidePanel);
-    
+document.getElementsByClassName("flip-card-front")[0].addEventListener("touchmove",hoverflip);
+document.getElementsByClassName("flip-card-back")[0].addEventListener("touchmove",hovercounterflip);
 
 function showPanel(){ 
     var panelContent = this.id + "-panelcontent";
@@ -152,4 +153,18 @@ function hidePanel(){
     panelOpen = 0;
 
 
+}
+
+function hoverflip(){
+    var innercard = document.getElementsByClassName("flip-card-inner")[0];
+    innercard.style.transform = "rotateX(180deg)";
+    innercard.style.boxShadow = "10px -20px 15px 0 rgba(0,0,0,0.5)";
+    console.log("flip exec");
+}
+
+function hovercounterflip(){
+    var innercard = document.getElementsByClassName("flip-card-inner")[0];
+    innercard.style.transform = "rotateX(360deg)";
+    innercard.style.boxShadow = "10px 20px 15px 0 rgba(0,0,0,0.5)";
+    console.log("counter flip exec");
 }
