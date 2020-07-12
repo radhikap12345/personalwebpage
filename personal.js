@@ -5,7 +5,7 @@ for (var i = 0; i < a.length; i++){
     a[i].setAttribute('target', '_blank');
 }
 
-
+var screenOrientation = window.screen.orientation;
 var heightOutput = window.innerHeight;
 var widthOutput = window.innerWidth;
 var body = document.getElementsByTagName("body")[0];
@@ -16,7 +16,7 @@ var mainGrid = document.getElementsByClassName("mainGrid")[0];
 body.style.display = "flex";
 console.log(body.style.display)
 
-if(heightOutput>widthOutput){
+if(heightOutput>widthOutput || screenOrientation == 'portrait-primary' || screenOrientation == 'portrait-secondary' ){
     panel.style.visibility ="hidden";
     hidePanel();
     var orientation = "portrait";
@@ -45,7 +45,7 @@ function reportWindowSize() {
   panel.style.transition = "none";
   hidePanel();
   panelOpen = 0;
-  if(heightOutput>widthOutput){
+  if(heightOutput>widthOutput || screenOrientation == 'portrait-primary' || screenOrientation == 'portrait-secondary' ){
     orientation = "portrait";
     panel.style.width = "100%";
     panel.style.height = "0%";
