@@ -163,18 +163,18 @@ body, html{
 }
 
 @keyframes nanocube1-small {
-    0%   {transform:translate(100px,5px) rotate(30deg);}
-    20%  {transform: translate(10px,100px) rotate(180deg);}
-    40%  {transform:translate(100px,160px) rotate(300deg);}
-    60%  {transform:translate(200px,60px) rotate(370deg);}
-    100% {transform:translate(100px,5px) rotate(300deg);}
+    0%   {transform:translate(40vw,5px) rotate(30deg);}
+    20%  {transform: translate(5vw,80px) rotate(180deg);}
+    40%  {transform:translate(30vw,100px) rotate(300deg);}
+    60%  {transform:translate(50vw,60px) rotate(370deg);}
+    100% {transform:translate(40vw,5px) rotate(300deg);}
   }
 
 @keyframes nanocube2-small {
-    0%   {transform:translate(70vw,3px) rotate(-30deg);}
-    30%  {transform: translate(70vw,250px) rotate(250deg);}
-    60%  {transform:translate(75vw,100px) rotate(300deg);}
-    100% {transform:translate(70vw,3px) rotate(330deg);}
+    0%   {transform:translate(70vw,1vh) rotate(-30deg);}
+    30%  {transform: translate(70vw,30vh) rotate(250deg);}
+    60%  {transform:translate(75vw,15vh) rotate(300deg);}
+    100% {transform:translate(70vw,1vh) rotate(330deg);}
 }
 
 @keyframes nanocube3 {
@@ -382,13 +382,15 @@ a:hover{
 
   .cube{
     filter: blur(6px);
+    opacity: 0.3;
   }
+
   #cubeNo1, #cubeLinkNo1{
       animation-name: nanocube1-mid;
       -webkit-animation-name: nanocube1-mid;
       width: 100px;
       height: 100px;
-      opacity: 0.3;
+      
   }
 
   #cubeNo2, #cubeLinkNo2{
