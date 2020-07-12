@@ -15,7 +15,7 @@ var panelContents = document.getElementsByClassName("panelcontent");
 var mainGrid = document.getElementsByClassName("mainGrid")[0];
 body.style.display = "flex";
 console.log(body.style.display)
-
+console.log(screenOrientation);
 if(heightOutput>widthOutput || screenOrientation == 'portrait-primary' || screenOrientation == 'portrait-secondary' ){
     panel.style.visibility ="hidden";
     hidePanel();
@@ -39,6 +39,7 @@ console.log(heightOutput, widthOutput, orientation)
 window.addEventListener('resize', reportWindowSize);   
 
 function reportWindowSize() {
+  console.log(window.screen.orientation);
   heightOutput = window.innerHeight;
   widthOutput = window.innerWidth;
   panel.style.visibility ="hidden";
@@ -74,8 +75,13 @@ document.getElementById("cubeLinkNo3").addEventListener("mouseover",()=>{documen
 document.getElementById("cubeLinkNo3").addEventListener("touchstart",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
 document.getElementById("cubeLinkNo3").addEventListener("mouseout",()=>{document.getElementById("cubeNo3").style.opacity="0.2";});
 document.getElementById("cubeLinkNo3").addEventListener("touchend",()=>{document.getElementById("cubeNo3").style.opacity="0.2";});
-
 document.getElementById("cubeLinkNo3").addEventListener("click",showPanel);
+
+document.getElementById("cubeLinkNo2").addEventListener("mouseover",()=>{document.getElementById("cubeNo2").style.opacity="0.5";});
+document.getElementById("cubeLinkNo2").addEventListener("touchstart",()=>{document.getElementById("cubeNo2").style.opacity="0.5";});
+document.getElementById("cubeLinkNo2").addEventListener("mouseout",()=>{document.getElementById("cubeNo2").style.opacity="0.2";});
+document.getElementById("cubeLinkNo2").addEventListener("touchend",()=>{document.getElementById("cubeNo2").style.opacity="0.2";});
+document.getElementById("cubeLinkNo2").addEventListener("click",showPanel);
 
 document.getElementById("cubeLinkNo1").addEventListener("mouseover",()=>{document.getElementById("cubeNo1").style.opacity="0.5";});
 document.getElementById("cubeLinkNo1").addEventListener("touchstart",()=>{document.getElementById("cubeNo1").style.opacity="0.5";});

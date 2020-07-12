@@ -1,0 +1,174 @@
+(function ($) {
+  $().ready(function() {
+    var alertMsg = $('div.alert-success.alert-block.alert').text();
+    var alertMatch = alertMsg.match(/Stanford Banner/g);
+    if (alertMatch != null) {
+      var newMsg = $('div.alert-success.alert-block.alert').html().replace('Stanford Banner', 'The block');
+      $('div.alert-success.alert-block.alert').html(newMsg);
+    }
+    var alertMatch = alertMsg.match(/Stanford Contact/g);
+    if (alertMatch != null) {
+      var newMsg = $('div.alert-success.alert-block.alert').html().replace('Stanford Contact', 'The block');
+      $('div.alert-success.alert-block.alert').html(newMsg);
+    }
+    var alertMatch = alertMsg.match(/Stanford Large Block/g);
+    if (alertMatch != null) {
+      var newMsg = $('div.alert-success.alert-block.alert').html().replace('Stanford Large Block', 'The block');
+      $('div.alert-success.alert-block.alert').html(newMsg);
+    }
+    var alertMatch = alertMsg.match(/Stanford Postcard/g);
+    if (alertMatch != null) {
+      var newMsg = $('div.alert-success.alert-block.alert').html().replace('Stanford Postcard', 'The block');
+      $('div.alert-success.alert-block.alert').html(newMsg);
+    }
+    var alertMatch = alertMsg.match(/Stanford Social Media Connect/g);
+    if (alertMatch != null) {
+      var newMsg = $('div.alert-success.alert-block.alert').html().replace('Stanford Social Media Connect', 'The block');
+      $('div.alert-success.alert-block.alert').html(newMsg);
+    }
+  }); 
+})(jQuery);;
+Drupal.behaviors.stanford_event_nodes = {
+  attach: function(context, settings) {
+  (function ($) {
+    $('.node-stanford-event .field-name-field-s-event-map-link a', context).prepend('<i class="icon-map-marker"></i> ');
+    $('.node-stanford-event .field-name-field-s-event-map-link a', context).addClass('btn btn-sm');
+  })(jQuery);
+  }
+};
+;
+Drupal.behaviors.stanford_events_calendar_aria = {
+  attach: function(context, settings) {
+
+    (function ($) {
+
+      // Add accessibility controls for the small calendar widget.
+      var block = $(".events-calendar-aria", context);
+      if ($(context).hasClass("events-calendar-aria")) {
+        block = context;
+        block.find(".date-heading a").focus();
+      }
+
+      if (block.length) {
+        var prev = block.find(".date-prev a");
+        var next = block.find(".date-next a");
+        block.attr("role", "navigation");
+        block.attr("aria-label", Drupal.t("Events calendar"));
+        prev.attr("aria-label", Drupal.t("Previous month"));
+        next.attr("aria-label", Drupal.t("Next month"));
+        $.each(block.find(".mini-day-on a"), function(i, v) {
+          var mylabel = Drupal.t("See all events on ") + $(v).parents(".events-calendar-aria").find(".date-heading a").text() + " " + $(v).text();
+          $(v).attr("aria-label", mylabel);
+        });
+        // Prevent space bar from jumping down page!
+        prev.keydown(function (e) {
+          var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+          if (key == 32) {
+            e.preventDefault();
+            $(this).trigger("click");
+          }
+        });
+        // Next as well.
+        next.keydown(function (e) {
+          var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+          if (key == 32) {
+            e.preventDefault();
+            $(this).trigger("click");
+          }
+        });
+
+      }
+
+    })(jQuery);
+  }
+};
+;
+Drupal.behaviors.stanford_private_page = {
+  attach: function(context, settings) {
+    (function ($) {
+
+      // Wysiwyg links.
+      $(".private-link", context).stanfordPrivatePage();
+
+      // Menu block.
+      $("#block-menu-menu-menu-private-pages a", context).stanfordPrivatePage();
+
+      // Page title altering.
+      $(".node-type-stanford-private-page #page-title", context).stanfordPrivatePage({
+        spokenText: Drupal.t(". Protected page.")
+      });
+
+    })(jQuery);
+  }
+};
+;
+// @see: https://github.com/jquery-boilerplate
+//
+// the semi-colon before function invocation is a safety net against concatenated
+// scripts and/or other plugins which may not be closed properly.
+;(function ( $, window, document, undefined ) {
+
+  "use strict";
+
+    // undefined is used here as the undefined global variable in ECMAScript 3 is
+    // mutable (ie. it can be changed by someone else). undefined isn't really being
+    // passed in so we can ensure the value of it is truly undefined. In ES5, undefined
+    // can no longer be modified.
+
+    // window and document are passed through as local variable rather than global
+    // as this (slightly) quickens the resolution process and can be more efficiently
+    // minified (especially when both are regularly referenced in your plugin).
+
+    // Create the defaults once
+    var pluginName = "stanfordPrivatePage";
+    var defaults = {
+      spokenText: ". Requires login"
+    };
+
+    // The actual plugin constructor
+    function Plugin ( element, options ) {
+      this.element = element;
+      this.settings = $.extend( {}, defaults, options );
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    // Avoid Plugin.prototype conflicts
+    $.extend(Plugin.prototype, {
+      init: function () {
+        // this.yourOtherFunction("jQuery Boilerplate");
+
+        var element = $(this.element);
+        var spokenText = element.text() + " ";
+        var iconText = element.attr("title");
+
+        if (typeof iconText !== "undefined" && iconText.length > 0) {
+          spokenText += iconText;
+        }
+        else {
+          spokenText += this.settings.spokenText;
+        }
+
+        element.attr("aria-label", spokenText);
+        element.removeAttr('alt');
+
+      },
+      yourOtherFunction: function (text) {
+        // some logic
+        $(this.element).text(text);
+      }
+    });
+
+    // A really lightweight plugin wrapper around the constructor,
+    // preventing against multiple instantiations
+    $.fn[ pluginName ] = function ( options ) {
+      return this.each(function() {
+        if ( !$.data( this, "plugin_" + pluginName ) ) {
+          $.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
+        }
+      });
+    };
+
+})( jQuery, window, document );
+;
