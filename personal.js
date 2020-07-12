@@ -117,8 +117,8 @@ function showPanel(){
         panel.style.transition = "2s";
         console.log('using',orientationVar);
         if (orientationVar == "portrait"){
-            mainGrid.style.height = "70%";
-            panel.style.height = "30%";
+            mainGrid.style.height = "55%";
+            panel.style.height = "45%";
             
         } else{
             mainGrid.style.width = "70%";
