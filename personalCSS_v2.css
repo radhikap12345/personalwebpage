@@ -13,6 +13,7 @@ body, html{
   background-color: rgb(36, 36, 36);
   height: 100vh;
   width: 100vw;
+  justify-content: space-between;
   
 }
 .mainGrid{
@@ -25,11 +26,13 @@ body, html{
     margin:0px;
     padding:0px;
     font-variant: small-caps;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
+    transition: 2s;
+  
 }
 
 .backgroundImage{
@@ -50,6 +53,44 @@ body, html{
   left:0px;
   }
 
+#panel{
+  width:0%;
+  height:0%;
+  background-color: white;
+  position: relative;
+  overflow-x: hidden;
+  box-shadow: -2px 0 2px 0 rgba(0, 0, 0, 0.789);
+  
+}
+
+#closebtn{
+  color:var(--linkhovercolor);
+  height:20px;
+}
+.panelcontent{
+  display:flex;
+  flex-direction: column;
+  visibility: hidden;
+  position: absolute;
+  top:40px;
+  margin:calc(5% - 10px);
+  width:90%;
+  border: 1px solid rgb(196, 196, 196);
+  box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.377);
+  justify-content: flex-start;
+  padding:10px;
+  height:auto;
+}
+.panelcontent iframe{
+  width: 80%;
+  margin: 10px auto ;
+  padding:10px;
+  height: auto;
+
+}
+.fa-youtube{
+  color:red;
+}
 .cube{
   width: 10vw;
   height: 10vw;
@@ -79,7 +120,7 @@ body, html{
   animation-duration: 10s;
   -webkit-animation-duration: 10s;
   transition-timing-function: ease-in-out;
-  opacity: 0.2;
+  opacity: 0;
   -webkit-opacity:0.2;
   border-radius: 8px;
   animation-iteration-count: infinite;
@@ -87,7 +128,7 @@ body, html{
   -webkit-transition-timing-function: ease-in-out;
   left:0px;
   top:0px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(8px);
 }
 
 @keyframes nanocube1 {
