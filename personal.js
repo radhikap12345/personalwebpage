@@ -105,6 +105,8 @@ document.getElementsByClassName("flip-card-front")[0].addEventListener("touchmov
 document.getElementsByClassName("flip-card-back")[0].addEventListener("touchmove",hovercounterflip);
 document.getElementsByClassName("flip-card-front")[0].addEventListener("click",hoverflip);
 document.getElementsByClassName("flip-card-back")[0].addEventListener("click",hovercounterflip);
+document.getElementsByClassName("flip-card-front")[0].addEventListener("mouseover",hoverflip);
+document.getElementsByClassName("flip-card-back")[0].addEventListener("mouseout",hovercounterflip);
 
 function showPanel(){ 
     var panelContent = this.id + "-panelcontent";
