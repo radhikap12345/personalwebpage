@@ -78,6 +78,7 @@ function reportWindowSize() {
 }
 
 
+
 console.log('whats the orientationVar here outside',orientationVar);
 
 document.getElementById("cubeLinkNo3").addEventListener("mouseover",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
@@ -102,6 +103,8 @@ document.getElementById("cubeLinkNo1").addEventListener("click",showPanel);
 document.getElementById("closebtn").addEventListener("click",hidePanel);
 document.getElementsByClassName("flip-card-front")[0].addEventListener("touchmove",hoverflip);
 document.getElementsByClassName("flip-card-back")[0].addEventListener("touchmove",hovercounterflip);
+document.getElementsByClassName("flip-card-front")[0].addEventListener("click",hoverflip);
+document.getElementsByClassName("flip-card-back")[0].addEventListener("click",hovercounterflip);
 
 function showPanel(){ 
     var panelContent = this.id + "-panelcontent";
