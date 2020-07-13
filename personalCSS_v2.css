@@ -6,7 +6,7 @@
 }
 
 
-body, html{
+body, html,#loadedsection, #loader{
   margin:0px;
   padding:0px;
   overflow: hidden;
@@ -16,16 +16,18 @@ body, html{
   justify-content: space-between;
   
 }
+
+
 .mainGrid{
     
     display: grid;
     grid-template-columns: 1fr 450px 1fr;
     grid-template-rows: 5fr 200px 8fr;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-variant: small-caps;
     overflow-x: hidden;
     margin:0px;
     padding:0px;
-    font-variant: small-caps;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -60,7 +62,9 @@ body, html{
   position: relative;
   overflow-x: hidden;
   box-shadow: -2px -2px 5px 0 rgba(0, 0, 0, 0.489);
-  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-variant: small-caps;
+  font-size: smaller;
 }
 
 #closebtn{
@@ -118,6 +122,54 @@ body, html{
   left:0px;
   top:0px;
   backdrop-filter: blur(2px);
+}
+
+
+.loadercube{
+  position:absolute;
+  background-color: rgb(255, 255, 255);
+  animation-name: loadercube;
+  -webkit-animation-name: loadercube;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  width: 7vw;
+  height: 7vw;
+  min-width: 50px;
+  min-height: 50px;
+}
+#loaderCubeNo1{
+  left:40vw;
+  top:40vh;
+  transform: rotate(20deg);
+  animation-duration: 7s;
+  -webkit-animation-duration: 7s;
+}
+#loaderCubeNo2{
+  left:50vw;
+  top:45vh;
+  transform: rotate(-20deg);
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+}
+
+.lightcone {
+  
+  left: 45vw;
+  top: 55vh;
+  position: absolute;
+  background-image: linear-gradient(to top,white,violet);
+}
+.lightcone:before {
+  width:50vw;
+  height:74px;
+  top: -10vh;
+  background:#F7B137;
+  left: -10vw;
+  z-index: 1;
+  border-radius:50%;
+  content: '';
+  position: absolute;
+  display: block;
 }
 
 .cubelink{
@@ -192,6 +244,11 @@ body, html{
   80% {transform:translate(65vw,40px) rotate(440deg);}
   100% {transform:translate(60vw,-50px) rotate(330deg);}
 }
+
+@keyframes loadercube {
+  50%  {transform:translate(10px,0px);}
+}
+
 #cubeNo1, #cubeLinkNo1 {
     animation-name: nanocube1;
     -webkit-animation-name: nanocube1;
