@@ -125,8 +125,8 @@ function showPanel(){
             panel.style.height = "45%";
             
         } else{
-            mainGrid.style.width = "70%";
-            panel.style.width = "30%";
+            mainGrid.style.width = "60%";
+            panel.style.width = "40%";
         }
         document.getElementById(panelContent).style.visibility = "visible"
         
