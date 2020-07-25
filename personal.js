@@ -1,5 +1,5 @@
 var panelOpen = 0;
-console.log(window.innerHeight,window.innerWidth);
+//console.log(window.innerHeight,window.innerWidth);
 var a = document.getElementsByTagName ('a'); 
 for (var i = 0; i < a.length; i++){
     a[i].setAttribute('target', '_blank');
@@ -15,19 +15,19 @@ var panelContents = document.getElementsByClassName("panelcontent");
 var mainGrid = document.getElementsByClassName("mainGrid")[0];
 var orientationVar = "unknown";
 body.style.display = "flex";
-console.log(body.style.display)
-console.log(screenorientationVar);
+//console.log(body.style.display)
+//console.log(screenorientationVar);
 if(heightOutput>widthOutput || screenorientationVar === 'portrait-primary' || screenorientationVar === 'portrait-secondary' ){
     panel.style.visibility ="hidden";
     hidePanel();
     orientationVar = "portrait";
-    console.log('whats the orientationVar here in if',orientationVar);
+    //console.log('whats the orientationVar here in if',orientationVar);
     panel.style.width = "100%";
     panel.style.height = "0%";
     body.style.flexDirection = "column";
     mainGrid.style.width = "100%";
     mainGrid.style.height = "100%";
-    console.log('IF exected');
+    //console.log('IF exected');
     
     }else{
         panel.style.visibility ="hidden";
@@ -37,17 +37,17 @@ if(heightOutput>widthOutput || screenorientationVar === 'portrait-primary' || sc
         body.style.flexDirection = "row";
         mainGrid.style.width = "100%";
         mainGrid.style.height = "100%";
-        console.log('ELSE exected');
+        //console.log('ELSE exected');
     }
-console.log(heightOutput, widthOutput, orientationVar)
-console.log('whats the orientationVar here outside',orientationVar);
+//console.log(heightOutput, widthOutput, orientationVar)
+//console.log('whats the orientationVar here outside',orientationVar);
 window.addEventListener('resize', reportWindowSize);   
 
-console.log('whats the orientationVar here up outside',orientationVar);
+//console.log('whats the orientationVar here up outside',orientationVar);
 
 function reportWindowSize() {
-  console.log(window.screen.orientationVar);
-  console.log(heightOutput, widthOutput, orientationVar)
+  //console.log(window.screen.orientationVar);
+  //console.log(heightOutput, widthOutput, orientationVar)
   heightOutput = window.innerHeight;
   widthOutput = window.innerWidth;
   panel.style.visibility ="hidden";
@@ -61,7 +61,7 @@ function reportWindowSize() {
     body.style.flexDirection = "column";
     mainGrid.style.width = "100%";
     mainGrid.style.height = "100%";
-    console.log('IF exected in func');
+    //console.log('IF exected in func');
    
 
     
@@ -74,12 +74,12 @@ function reportWindowSize() {
         mainGrid.style.height = "100%";
         console.log('ELSE exected in func');
     }
-  console.log(heightOutput, widthOutput, orientationVar)
+  //console.log(heightOutput, widthOutput, orientationVar)
 }
 
 
 
-console.log('whats the orientationVar here outside',orientationVar);
+//console.log('whats the orientationVar here outside',orientationVar);
 
 document.getElementById("cubeLinkNo3").addEventListener("mouseover",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
 document.getElementById("cubeLinkNo3").addEventListener("touchmove",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
@@ -115,11 +115,11 @@ function showPanel(){
     }else{
         showPanelsub()
     }
-    console.log('whats the orientationVar here',orientationVar);
+    //console.log('whats the orientationVar here',orientationVar);
     function showPanelsub(){
         panel.style.visibility = "visible";
         panel.style.transition = "2s";
-        console.log('using',orientationVar);
+        //console.log('using',orientationVar);
         if (orientationVar == "portrait"){
             mainGrid.style.height = "55%";
             panel.style.height = "45%";
@@ -171,3 +171,15 @@ function hovercounterflip(){
     innercard.style.boxShadow = "10px 20px 15px 0 rgba(0,0,0,0.5)";
     console.log("counter flip exec");
 }
+
+function blinkCubes(){
+    console.log('Blinking started');
+    setTimeout(()=>{document.getElementById("cubeNo1").style.opacity="0.8";},1000);
+    setTimeout(()=>{document.getElementById("cubeNo2").style.opacity="0.8";},2000);
+    setTimeout(()=>{document.getElementById("cubeNo3").style.opacity="0.8";},3000);
+    setTimeout(()=>{document.getElementById("cubeNo1").style.opacity="0.2";},2100);
+    setTimeout(()=>{document.getElementById("cubeNo2").style.opacity="0.2";},3100);
+    setTimeout(()=>{document.getElementById("cubeNo3").style.opacity="0.2";},4000);
+    console.log('Blinking done');
+}
+window.addEventListener('load',blinkCubes);
