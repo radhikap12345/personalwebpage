@@ -81,11 +81,11 @@ function reportWindowSize() {
 
 //console.log('whats the orientationVar here outside',orientationVar);
 
-document.getElementById("cubeLinkNo3").addEventListener("mouseover",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
-document.getElementById("cubeLinkNo3").addEventListener("touchmove",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
-document.getElementById("cubeLinkNo3").addEventListener("mouseout",()=>{document.getElementById("cubeNo3").style.opacity="0.2";});
-document.getElementById("cubeLinkNo3").addEventListener("touchend",()=>{document.getElementById("cubeNo3").style.opacity="0.2";});
-document.getElementById("cubeLinkNo3").addEventListener("click",showPanel);
+//document.getElementById("cubeLinkNo3").addEventListener("mouseover",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
+//document.getElementById("cubeLinkNo3").addEventListener("touchmove",()=>{document.getElementById("cubeNo3").style.opacity="0.5";});
+//document.getElementById("cubeLinkNo3").addEventListener("mouseout",()=>{document.getElementById("cubeNo3").style.opacity="0.2";});
+//document.getElementById("cubeLinkNo3").addEventListener("touchend",()=>{document.getElementById("cubeNo3").style.opacity="0.2";});
+//document.getElementById("cubeLinkNo3").addEventListener("click",showPanel);
 
 document.getElementById("cubeLinkNo2").addEventListener("mouseover",()=>{document.getElementById("cubeNo2").style.opacity="0.5";});
 document.getElementById("cubeLinkNo2").addEventListener("touchmove",()=>{document.getElementById("cubeNo2").style.opacity="0.5";});
@@ -182,4 +182,4 @@ function blinkCubes(){
     setTimeout(()=>{document.getElementById("cubeNo3").style.opacity="0.2";},4000);
     console.log('Blinking done');
 }
-window.addEventListener('load',blinkCubes);
+//window.addEventListener('load',blinkCubes);
